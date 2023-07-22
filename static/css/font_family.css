@@ -1,0 +1,56 @@
+body {
+font-family: 'Alegreya Sans', serif;
+}
+
+p {
+font-family: 'Alegreya', serif;
+font-size: 22px;
+}
+
+.p-table {
+font-size: 22px !important;
+font-family: 'Alegreya', serif;
+}
+
+.my-auto {
+margin-top: auto !important;
+}
+
+.cover-heading {
+font-size: 80px;
+}
+
+.nav-size {
+font-size: 25px;
+}
+
+.every-other {
+background-color: #ebe6e6;
+}
+
+.my-img {
+border-radius: 25px;
+}
+
+.phone-img-win {
+height: 650px;
+}
+
+.contact-me {
+font-size: 26px;
+}
+
+.form-letter-size {
+font-size: 20px;
+}
+
+.my-description {
+display: inline-block;
+}
+
+.cover-img {
+  background-image: url('/static/img/test3k.jpg');
+  max-width: auto;
+  height: 100%;
+  background-size: cover;
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Main Page{% endblock %}
+
+{% include "header.html" %}
+{% block content %}
+
+<div class="cover-img">
+  <div class="cover-container d-flex h-100 p-3 flex-column justify-content-center">
+    <div class="mx-auto text-center">
+      <h1 class="cover-heading">Hi, I'm Michał</h1>
+      <h3>I'm a civil project manager and python developer</h3>
+      <a href="{{ url_for('about_me_page') }}" class="btn btn-lg btn-secondary">Learn more</a>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
+
+{% endblock %}

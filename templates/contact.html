@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} Contact me {% endblock %}
+
+{% block content %}
+{% include 'header.html' %}
+
+
+<div style="background-image: url('{{ url_for('static', filename='img/test.jpg')}}')">
+   <div class="container">
+      <div class="row phone-img-win">
+         <div class="col-lg-8 col-md-10 mx-auto my-auto">
+            <div class="mx-auto text-center contact-me">
+               <h1>Contact Me</h1>
+               <span class="subheading">Have questions? I have answers.</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container" style="font-size: 20px;">
+   {% with messages = get_flashed_messages() %}
+      {% if messages: %}
+         {% for message in messages: %}
+           <p>{{ message }}</p>
+         {% endfor %}
+      {% endif %}
+   {% endwith %}
+   {{ ckeditor.load() }}
+   {{ ckeditor.config(name='message') }}
+   {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"})}}
+</div>
+
+{% include 'footer.html'%}
+{% endblock %}
